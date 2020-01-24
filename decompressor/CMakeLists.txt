@@ -1,9 +1,9 @@
 project(decompressor)
 
-file(GLOB SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cc ${CMAKE_SOURCE_DIR}/runtime/testHelper/GeneratedCode.cc)
+file(GLOB SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cc ${NanoLog_SOURCE_DIR}/runtime/testHelper/GeneratedCode.cc)
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/runtime)
+target_include_directories(${PROJECT_NAME} PRIVATE ${NanoLog_SOURCE_DIR}/runtime)
 target_link_libraries(${PROJECT_NAME} NanoLog)
 
 include(GNUInstallDirs)
